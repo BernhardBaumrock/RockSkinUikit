@@ -1,0 +1,99 @@
+
+// general reno variables
+@reno-text-color: @tm-text-color;
+@reno-link-color: contrast(@tm-primary-color, darken(@tm-primary-color, 10%), lighten(@tm-primary-color, 10%));
+@reno-link-hover-color: darken(@reno-link-color, 10%);
+
+@reno-primary-background: @tm-primary-color;
+@reno-secondary-background: @tm-muted;
+@reno-success-background: #8bccde;
+@reno-success-color: @reno-text-color;
+@reno-warning-background: #FFD15E;
+@reno-warning-color: @reno-text-color;
+@reno-danger-background: #bc283d;
+@reno-danger-color: #fff;
+@reno-alert-background: @tm-muted;
+@reno-alert-color: @reno-text-color;
+@reno-primary-headline-color: @tm-primary-color;
+@reno-secondary-headline-color: lighten(@reno-primary-headline-color, 10%);
+@reno-notes-text-color: #fff;
+@reno-notes-background: @tm-secondary-color;
+@reno-table-header-color: @tm-text-color;
+@reno-table-header-current-color: @reno-primary-background;
+
+// masthead
+@reno-dark-background: @tm-primary-color;
+@reno-masthead-background: @reno-dark-background;
+@reno-masthead-link-color: contrast(@reno-dark-background, lighten(#000, 10%), darken(#fff, 10%));
+@reno-masthead-link-hover-color: lighten(@reno-masthead-link-color, 20%);
+@reno-masthead-link-current-color: lighten(@reno-masthead-link-color, 100%);
+@reno-masthead-icon-color: @reno-masthead-link-color;
+@reno-masthead-search-text-color: @reno-masthead-link-hover-color;
+@reno-masthead-search-background: transparent;
+@reno-masthead-search-border-color: @reno-masthead-link-color;
+@reno-masthead-search-focus-background: lighten(@reno-dark-background, 5%);
+@reno-masthead-search-focus-text-color: @reno-masthead-link-color;
+@reno-masthead-search-focus-border-color: @reno-masthead-search-focus-background;
+@reno-masthead-search-icon-color: @reno-masthead-icon-color; 
+
+@reno-dropdown-background: #fff; 
+@reno-dropdown-color: @reno-text-color;
+@reno-dropdown-hover-background: @tm-muted;
+@reno-dropdown-border-color: darken(@tm-muted, 20%);
+@reno-dropdown-border: 1px solid @reno-dropdown-border-color;
+@reno-dropdown-nav-icon-color: @reno-text-color;
+
+// inputfields
+@reno-muted-background: @tm-muted;
+@reno-muted-text-color: darken(@reno-muted-background, 80%); 
+@reno-muted-text-color-alternate: @reno-muted-text-color;
+@reno-inputfield-border: 1px solid @tm-muted;
+@reno-inputfield-input-background: #fff;
+@reno-inputfield-input-border-color: @tm-muted;
+@reno-inputfield-select-background: #fff;
+@reno-inputfield-select-border-color: @tm-muted;
+@reno-form-radio-checked-background: @tm-primary-color;
+
+@reno-button-text-color: #fff;
+@reno-button-background: @reno-primary-background;
+@reno-button-hover-background: @global-link-color;
+@reno-button-secondary-background: @tm-secondary-color;
+
+// page list
+@reno-page-list-link-color: @tm-text-color;
+@reno-page-list-link-open-color: lighten(@reno-page-list-link-color, 10%);
+@reno-page-list-icon-color: @reno-page-list-link-color;
+@reno-page-list-link-active-color: lighten(@reno-page-list-link-color, 10%);
+@reno-page-list-link-hover-color: lighten(@reno-page-list-link-color, 10%);
+@reno-page-list-action-link-color: #fff;
+@reno-page-list-action-link-background-color: @tm-secondary-color;
+@reno-page-list-action-link-hover-color: #fff;
+@reno-page-list-action-link-hover-background-color: lighten(@tm-secondary-color, 10%);
+
+// offcanvas
+@reno-offcanvas-text-color: @reno-text-color;
+@reno-offcanvas-link-color: @reno-text-color;
+@reno-offcanvas-link-hover-color: @reno-link-color;
+@reno-offcanvas-link-open-color: @reno-link-color;
+@reno-offcanvas-background: @reno-secondary-background; 
+@reno-offcanvas-search-background: #fff;
+
+// lang
+@reno-language-tab-background: transparent;
+@reno-language-tab-color: @reno-text-color;
+@reno-language-tab-current-background: @tm-muted;
+@reno-language-tab-current-color: @reno-primary-headline-color;
+@reno-language-tab-hover-background: @reno-muted-background;
+@reno-language-tab-hover-color: @reno-text-color;
+@reno-language-tab-empty-color: @reno-muted-text-color;
+
+// ########## custom css adjustments ##########
+p.notes { padding: 0 5px; }
+.pw-logo-custom, .pw-logo-custom svg { height: 40px; width: 45px; }
+.pw-logo-custom:hover path { fill: white; }
+.pw-logo-custom path { fill: black; }
+
+@img-bg: fade(@tm-primary-color, 30%);
+.gridImage:hover .gridImage__inner { background: @img-bg !important; }
+.gridImage.gridImageEditing .gridImage__inner { background: @img-bg !important; }
+// #############################################
