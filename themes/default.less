@@ -88,12 +88,19 @@
 @reno-language-tab-empty-color: @reno-muted-text-color;
 
 // ########## custom css adjustments ##########
-p.notes { padding: 0 5px; }
-.pw-logo-custom, .pw-logo-custom svg { height: 40px; width: 45px; }
-.pw-logo-custom:hover path { fill: @reno-masthead-link-color !important; }
-.pw-logo-custom path { fill: @reno-masthead-link-hover-color !important; }
 
-@img-bg: fade(@tm-primary-color, 30%);
-.gridImage:hover .gridImage__inner { background: @img-bg !important; }
-.gridImage.gridImageEditing .gridImage__inner { background: @img-bg !important; }
+  // general
+  p.notes { padding: 0 5px; }
+  .pw-logo-custom, .pw-logo-custom svg { height: 40px; width: 45px; }
+  .pw-logo-custom:hover path { fill: @reno-masthead-link-color !important; }
+  .pw-logo-custom path { fill: @reno-masthead-link-hover-color !important; }
+
+  // image field
+  @img-bg: fade(@tm-primary-color, 30%);
+  .gridImage:hover .gridImage__inner { background: @img-bg !important; }
+  .gridImage.gridImageEditing .gridImage__inner { background: @img-bg !important; }
+
+  // vex adjustments
+  .vex-dialog-button-primary {background: @tm-primary-color !important;}
+
 // #############################################
