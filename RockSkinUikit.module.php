@@ -38,10 +38,18 @@ class RockSkinUikit extends WireData implements Module {
     $info = pathinfo($file);
     if(!$info['extension'] == 'less') return;
 
+    // get list of files to monitor
+    $monitor = $this->files->find(__DIR__, ['extensions'=>['less']]);
+    $monitor = array_merge($monitor, $this->files->find(
+      $this->config->paths->assets."RockSkinUikit",
+      ['extensions' => ['less']]
+    ));
+
     // load less module
+    /** @var RockLESS $less */
     $less = $this->modules->get('RockLESS');
     $newfile = "$file.css";
-    $less->getCSS($file, $newfile, null, null, $this->files->find(__DIR__, ['extensions'=>['less']]));
+    $less->getCSS($file, $newfile, null, null, $monitor);
 
     $t = filemtime($newfile);
     $event->return = $less->getUrl($newfile) . "?t=$t";
