@@ -1,10 +1,10 @@
 
 // general reno variables
 @reno-text-color: @rs-text-color;
-@reno-link-color: contrast(@rs-primary-color, darken(@rs-primary-color, 10%), lighten(@rs-primary-color, 10%));
+@reno-link-color: contrast(@rs-primary, darken(@rs-primary, 10%), lighten(@rs-primary, 10%));
 @reno-link-hover-color: darken(@reno-link-color, 10%);
 
-@reno-primary-background: @rs-primary-color;
+@reno-primary-background: @rs-primary;
 @reno-secondary-background: @rs-muted;
 @reno-success-background: #8bccde;
 @reno-success-color: @reno-text-color;
@@ -14,15 +14,15 @@
 @reno-danger-color: #fff;
 @reno-alert-background: @rs-muted;
 @reno-alert-color: @reno-text-color;
-@reno-primary-headline-color: @rs-primary-color;
+@reno-primary-headline-color: @rs-primary;
 @reno-secondary-headline-color: lighten(@reno-primary-headline-color, 10%);
-@reno-notes-background: @rs-secondary-color;
-@reno-notes-text-color: contrast(@reno-notes-background);
+@reno-notes-background: @rs-secondary;
+@reno-notes-text-color: @rs-secondary-color;
 @reno-table-header-color: @rs-text-color;
 @reno-table-header-current-color: @reno-primary-background;
 
 // masthead
-@reno-dark-background: @rs-primary-color;
+@reno-dark-background: @rs-primary;
 @reno-masthead-background: @reno-dark-background;
 @reno-masthead-link-color: contrast(@reno-dark-background, lighten(#000, 10%), darken(#fff, 10%));
 @reno-masthead-link-hover-color: lighten(@reno-masthead-link-color, 20%);
@@ -52,12 +52,12 @@
 @reno-inputfield-input-border-color: @rs-muted;
 @reno-inputfield-select-background: #fff;
 @reno-inputfield-select-border-color: @rs-muted;
-@reno-form-radio-checked-background: @rs-primary-color;
+@reno-form-radio-checked-background: @rs-primary;
 
 @reno-button-text-color: #fff;
 @reno-button-background: @reno-primary-background;
 @reno-button-hover-background: @global-link-color;
-@reno-button-secondary-background: @rs-secondary-color;
+@reno-button-secondary-background: @rs-secondary;
 
 // page list
 @reno-page-list-link-color: @rs-text-color;
@@ -66,9 +66,9 @@
 @reno-page-list-link-active-color: lighten(@reno-page-list-link-color, 10%);
 @reno-page-list-link-hover-color: lighten(@reno-page-list-link-color, 10%);
 @reno-page-list-action-link-color: #fff;
-@reno-page-list-action-link-background-color: @rs-secondary-color;
+@reno-page-list-action-link-background-color: @rs-secondary;
 @reno-page-list-action-link-hover-color: #fff;
-@reno-page-list-action-link-hover-background-color: lighten(@rs-secondary-color, 10%);
+@reno-page-list-action-link-hover-background-color: lighten(@rs-secondary, 10%);
 
 // offcanvas
 @reno-offcanvas-text-color: @reno-text-color;
@@ -93,11 +93,11 @@
   p.notes { padding: 0 5px; }
 
   // image field
-  @img-bg: fade(@rs-primary-color, 30%);
+  @img-bg: fade(@rs-primary, 30%);
   .gridImage:hover .gridImage__inner { background: @img-bg !important; }
   .gridImage.gridImageEditing .gridImage__inner { background: @img-bg !important; }
 
   // vex adjustments
-  .vex-dialog-button-primary {background: @rs-primary-color !important;}
+  .vex-dialog-button-primary {background: @rs-primary !important;}
 
 // #############################################
