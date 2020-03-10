@@ -1,6 +1,8 @@
 <?php namespace ProcessWire;
 /**
  * RockSkinUikit
+ * 
+ * // TODO input placeholder text heller machen!
  *
  * @author Bernhard Baumrock, 13.01.2019
  * @license Licensed under MIT
@@ -11,7 +13,7 @@ class RockSkinUikit extends WireData implements Module {
   public static function getModuleInfo() {
     return [
       'title' => 'RockSkinUikit',
-      'version' => '0.0.3',
+      'version' => '0.0.4',
       'summary' => 'Helper module to easily skin the Uikit Admin Theme',
       'autoload' => true,
       'icon' => 'paint-brush',
@@ -44,15 +46,17 @@ class RockSkinUikit extends WireData implements Module {
       $this->config->paths->assets."RockSkinUikit",
       ['extensions' => ['less']]
     ));
+    $monitor[] = $this->config->paths->site . "config.php";
 
     // load less module
     /** @var RockLESS $less */
     $less = $this->modules->get('RockLESS');
+    $less->vars = $this->config->lessVars;
     $newfile = "$file.css";
     $less->getCSS($file, $newfile, null, null, $monitor);
 
     $t = filemtime($newfile);
-    $event->return = $less->getUrl($newfile) . "?t=$t";
+    $event->return = $less->getUrl($newfile) . "?xxx=$t";
   }
 
   /**
