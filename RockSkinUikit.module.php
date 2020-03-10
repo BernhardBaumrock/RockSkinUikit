@@ -2,8 +2,6 @@
 /**
  * RockSkinUikit
  * 
- * // TODO input placeholder text heller machen!
- *
  * @author Bernhard Baumrock, 13.01.2019
  * @license Licensed under MIT
  * @link https://www.baumrock.com
