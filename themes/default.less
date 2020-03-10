@@ -1,3 +1,5 @@
+// rocktheme variable setup
+@rs-muted-color: darken(@rs-muted, 80%);
 
 // general reno variables
 @reno-text-color: @rs-text-color;
@@ -45,7 +47,7 @@
 
 // inputfields
 @reno-muted-background: @rs-muted;
-@reno-muted-text-color: darken(@reno-muted-background, 80%); 
+@reno-muted-text-color: @rs-muted-color;
 @reno-muted-text-color-alternate: @reno-muted-text-color;
 @reno-inputfield-border: 1px solid @rs-muted;
 @reno-inputfield-input-background: #fff;
@@ -105,10 +107,29 @@
   }
 
   // tweak secondary buttons
+  // ui-button
+  .ui-button,
+  .ui-button.ui-state-default,
+  .ui-button.ui-state-hover {
+    background-color: @rs-primary;
+    background: @rs-primary;
+    color: @rs-primary-color;
+  }
   .ui-button.ui-priority-secondary,
-  .ui-button.ui-state-default.ui-priority-secondary,
-  .ui-button.ui-state-hover.ui-priority-secondary {
+  .ui-button.ui-state-default.ui-priority-secondary {
+    background: @rs-muted;
+    color: @rs-muted-color;
+    &:not([data-pw-dropdown]) {
+      border-left: 5px solid @rs-secondary;
+    }
+  }
+  .ui-button:hover,
+  .ui-button.ui-state-hover {
+    background-color: @rs-secondary;
     color: @rs-secondary-color;
+    &.xui-priority-secondary:not([data-pw-dropdown]) {
+      border-left: 5px solid @rs-secondary;
+    }
   }
 
   // make sure pagelistactions have the correct color
