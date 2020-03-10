@@ -89,8 +89,42 @@
 
 // ########## custom css adjustments ##########
 
-  // general
-  p.notes { padding: 0 5px; }
+  // BETTER create custom design or tweak reno theme directly
+
+  // make notes grey + secondary accent
+  #main .notes {
+    padding: 0 5px;
+    background: lighten(@rs-muted, 5%);
+    border-left: 5px solid @rs-secondary;
+  }
+
+  // prevent grey secondary inputfield color
+  .InputfieldIsSecondary > .InputfieldHeader,
+  .InputfieldIsSecondary > .InputfieldContent {
+    background: none;
+  }
+
+  // tweak secondary buttons
+  .ui-button.ui-priority-secondary,
+  .ui-button.ui-state-default.ui-priority-secondary,
+  .ui-button.ui-state-hover.ui-priority-secondary {
+    color: @rs-secondary-color;
+  }
+
+  // make sure pagelistactions have the correct color
+  .PageList {
+    .PageListActions, .PageListerActions, .PageListMoveNote {
+      a, a:hover {
+        color: @rs-secondary-color;
+        font-weight: normal;
+      }
+    }
+  }
+
+  // tweak placeholder text
+  input, .uk-input {
+    &::placeholder { color: lighten(black, 70%); }
+  }
 
   // image field
   @img-bg: fade(@rs-primary, 30%);
