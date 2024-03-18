@@ -11,8 +11,8 @@ class RockSkinUikit extends WireData implements Module {
   public static function getModuleInfo() {
     return [
       'title' => 'RockSkinUikit',
-      'version' => '0.0.4',
-      'summary' => 'Helper module to easily skin the Uikit Admin Theme',
+      'version' => '0.0.5',
+      'summary' => 'DEPRECATED - Please use AdminStyleRock instead!',
       'autoload' => true,
       'icon' => 'paint-brush',
       'requires' => ['RockLESS'],
